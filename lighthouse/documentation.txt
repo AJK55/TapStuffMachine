@@ -1,0 +1,10 @@
+https://www.npmjs.com/package/lighthouse
+
+puppeteer, lighthouse, slack
+https://medium.com/@jovd/lighthouse-with-puppeteer-5dc4e3245eed
+
+https://github.com/GoogleChrome/lighthouse
+
+https://www.upbuild.io/blog/lighthouse-reports-multiple-pages/
+https://www.upbuild.io/blog/automated-pagespeed-insights-update/
+

@@ -1,0 +1,1 @@
+lighthouse-batch -s https://www.coach.com/,https://www.katespade.com/

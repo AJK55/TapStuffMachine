@@ -1,0 +1,1 @@
+lighthouse https://staging-spades-fnp.demandware.net/on/demandware.store/Sites-Shop-Site/ --extra-headers "{\"Authorization\":\"Basic U3RvcmVmcm9udDpLJE5ZMjAyMA==\"}" --output csv --output-path .\report\report.csv --chrome-flags="--headless" --save-assets

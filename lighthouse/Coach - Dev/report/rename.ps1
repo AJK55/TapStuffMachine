@@ -1,0 +1,1 @@
+﻿Rename-Item -Path ".\report.csv" -NewName "report $(get-date -uformat %d%m%Y%H%M%S).csv"

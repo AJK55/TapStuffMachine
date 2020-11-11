@@ -1,0 +1,1 @@
+lighthouse https://development-global-coach.demandware.net/on/demandware.store/Sites-Coach_US-Site --use-mobile-user-agent --extra-headers "{\"Authorization\":\"Basic c3RvcmVmcm9udDpDT0FDSDIwMjA=\"}" --output csv --output-path .\report\report.csv --chrome-flags="--headless" --save-assets

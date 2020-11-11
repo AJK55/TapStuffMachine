@@ -1,0 +1,1 @@
+lighthouse-batch -f sites.txt
