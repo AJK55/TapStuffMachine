@@ -1,0 +1,19 @@
+http://eu.stuartweitzman.com***https://eu.stuartweitzman.com
+https://eu.stuartweitzman.com/**2.2.2.3*https://eu.stuartweitzman.com/fr/home/
+https://eu.stuartweitzman.com/**2.21.242.0*https://eu.stuartweitzman.com/de/home/*Redirects to Location: https://eu.stuartweitzman.com/en/home/ DE
+https://eu.stuartweitzman.com/**2.18.208.0*https://eu.stuartweitzman.com/es/home/*Redirects to Location: https://eu.stuartweitzman.com/en/home/ ES
+https://eu.stuartweitzman.com/**2.32.0.0*https://eu.stuartweitzman.com/it/home/*Redirects to Location: https://eu.stuartweitzman.com/en/home/ IT
+https://eu.stuartweitzman.com/**2.56.228.0*https://eu.stuartweitzman.com/ru/home/*Redirects to Location: https://eu.stuartweitzman.com/en/home/ RU
+https://eu.stuartweitzman.com/*true*2.2.2.3*https://eu.stuartweitzman.com/fr/home/
+https://eu.stuartweitzman.com/*true*2.21.242.0*https://eu.stuartweitzman.com/de/home/
+https://eu.stuartweitzman.com/*true*2.32.0.0*https://eu.stuartweitzman.com/it/home/*Redirects to Location: https://eu.stuartweitzman.com/en/home/ IT
+https://eu.stuartweitzman.com/*true*2.18.208.0*https://eu.stuartweitzman.com/es/home/
+https://eu.stuartweitzman.com/*true*2.56.228.0*https://eu.stuartweitzman.com/ru/home/
+http://eu.stuartweitzman.com/maintenance.html***https://eu.stuartweitzman.com/maintenance.html
+http://eu.stuartweitzman.com/maintenance_files/***https://eu.stuartweitzman.com/maintenance.html* 404
+http://eu.stuartweitzman.com/en_US/***https://eu.stuartweitzman.com/en/*Not working in Jmeter
+https://eu.stuartweitzman.com/**1.1.2.0*https://www.stuartweitzman.cn
+https://eu.stuartweitzman.com/**1.64.0.0*https://www.stuartweitzman.hk*HongKong
+https://eu.stuartweitzman.com/**1.174.208.0*https://www.stuartweitzman.hk*Taiwan
+https://eu.stuartweitzman.com/**27.109.128.0*https://www.stuartweitzman.hk*Macao
+https://eu.stuartweitzman.com/**1.66.0.0*https://www.stuartweitzman.jp*Japan

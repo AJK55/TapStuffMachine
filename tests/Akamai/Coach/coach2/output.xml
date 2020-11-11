@@ -1,0 +1,36 @@
+responseCode,responseMessage,threadName,failureMessage,bytes,URL,Connect
+200,OK,Thread Group 1-1,,4217,https://china.coach.com/,271
+200,OK,Thread Group 1-1,,4218,https://china.coach.com/,19
+200,OK,Thread Group 1-1,,67963,https://hongkong.coach.com/,277
+200,OK,Thread Group 1-1,,67965,https://hongkong.coach.com/,19
+200,OK,Thread Group 1-1,,69534,https://taiwan.coach.com/,137
+200,OK,Thread Group 1-1,,69543,https://taiwan.coach.com/,17
+200,OK,Thread Group 1-1,,67963,https://hongkong.coach.com/,202
+200,OK,Thread Group 1-1,,67965,https://hongkong.coach.com/,18
+200,OK,Thread Group 1-1,,77154,https://japan.coach.com/,196
+200,OK,Thread Group 1-1,,77178,https://japan.coach.com/,0
+200,OK,Thread Group 1-1,,203481,https://ca.coach.com/,104
+200,OK,Thread Group 1-1,,203784,https://ca.coach.com/,19
+200,OK,Thread Group 1-1,,203485,https://ca.coach.com/?=googleshopping,0
+200,OK,Thread Group 1-1,,203486,https://ca.coach.com/?=googleshopping,0
+200,OK,Thread Group 1-1,,77154,https://japan.coach.com/,110
+200,OK,Thread Group 1-1,,67964,https://hongkong.coach.com/,108
+200,OK,Thread Group 1-1,,64244,https://singapore.coach.com/,80
+200,OK,Thread Group 1-1,,69534,https://taiwan.coach.com/,134
+200,OK,Thread Group 1-1,,62876,https://malaysia.coach.com/,90
+200,OK,Thread Group 1-1,,63569,https://korea.coach.com/,102
+200,OK,Thread Group 1-1,,182887,https://de.coach.com/,91
+429,Too Many Requests,Thread Group 1-1,Response was null,998,https://coachaustralia.com/,151
+200,OK,Thread Group 1-1,,178052,https://uk.coach.com/,111
+200,OK,Thread Group 1-1,,182863,https://de.coach.com/,94
+200,OK,Thread Group 1-1,,183403,https://it.coach.com/,94
+200,OK,Thread Group 1-1,,183709,https://es.coach.com/,118
+200,OK,Thread Group 1-1,,181427,https://fr.coach.com/,91
+200,OK,Thread Group 1-1,,178346,https://uk.coach.com/,84
+200,OK,Thread Group 1-1,,178334,https://uk.coach.com/,18
+200,OK,Thread Group 1-1,Test failed: text expected to contain /Coach_WM/,209807,https://www.coach.com/,89
+200,OK,Thread Group 1-1,,5028,https://china.coach.com/,123
+200,OK,Thread Group 1-1,,68819,https://hongkong.coach.com/,115
+200,OK,Thread Group 1-1,,70392,https://taiwan.coach.com/,110
+200,OK,Thread Group 1-1,,68819,https://hongkong.coach.com/,102
+200,OK,Thread Group 1-1,,16605,https://japan.coachoutlet.com/member/CSfEml.jsp,100

@@ -1,0 +1,20 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1587654285555,152,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1184,158,1,1,http://eu.stuartweitzman.com,152,0,38
+1587654285708,187,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,165,1,1,https://eu.stuartweitzman.com/,187,0,150
+1587654285895,169,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,168,1,1,https://eu.stuartweitzman.com/,169,0,131
+1587654286064,165,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,168,1,1,https://eu.stuartweitzman.com/,165,0,119
+1587654286229,160,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,166,1,1,https://eu.stuartweitzman.com/,160,0,121
+1587654286389,168,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,168,1,1,https://eu.stuartweitzman.com/,168,0,131
+1587654286558,171,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,169,1,1,https://eu.stuartweitzman.com/,171,0,134
+1587654286729,164,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,172,1,1,https://eu.stuartweitzman.com/,164,0,120
+1587654286893,165,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,170,1,1,https://eu.stuartweitzman.com/,165,0,123
+1587654287058,169,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,172,1,1,https://eu.stuartweitzman.com/,169,0,131
+1587654287227,159,HTTP Request,302,Moved Temporarily,Thread Group 1-1,,true,,1228,172,1,1,https://eu.stuartweitzman.com/,159,0,122
+1587654287387,83,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1200,174,1,1,http://eu.stuartweitzman.com/maintenance.html,83,0,38
+1587654287470,82,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1202,176,1,1,http://eu.stuartweitzman.com/maintenance_files/,82,0,34
+1587654287552,84,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1187,164,1,1,http://eu.stuartweitzman.com/en_US/,84,0,39
+1587654287636,162,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1220,165,1,1,https://eu.stuartweitzman.com/,162,0,124
+1587654287799,171,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1220,166,1,1,https://eu.stuartweitzman.com/,171,0,131
+1587654287970,168,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1220,169,1,1,https://eu.stuartweitzman.com/,168,0,132
+1587654288138,175,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1220,170,1,1,https://eu.stuartweitzman.com/,175,0,136
+1587654288313,168,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1220,166,1,1,https://eu.stuartweitzman.com/,168,0,131

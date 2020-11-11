@@ -1,0 +1,31 @@
+I dont know how to interpret
+(string.wildcard_match(string.lower($request.path),{"/akamaiauth"}) == true) 
+and ($request.cookie.akastg == nil) 
+and (string.wildcard_match(string.lower($request.header.Host),{"akastg.stuartweitzman.com"}) == true)	
+Redirect	^(.*)	$scheme://$host/home/
+
+I dont know how to interpret
+(string.wildcard_match(string.lower($request.path),{"/caakamaiauth"}) == true) 
+and ($request.cookie.caakastg == nil) 
+and (string.wildcard_match(string.lower($request.header.Host),{"akastg.stuartweitzman.com"}) == true)	
+Redirect	^(.*)	$scheme://$host/eng/home/
+
+No ReWrite on Instart or Akamai
+string.wildcard_match(string.lower($request.path),
+{"/apple-touch-icon.png",
+"/apple-touch-icon-precomposed.png",
+"/apple-touch-icon-152x152.png",
+"/apple-touch-icon-152x152-precomposed.png",
+"/apple-touch-icon-120x120.png",
+"/apple-touch-icon-120x120-precomposed.png",
+"/apple-touch-icon-76x76.png",
+"/apple-touch-icon-76x76-precomposed.png"}) == true	
+Rewrite	^(.*)	/stuartweitzman/SWlogo.jpeg
+
+Fails on both Instart and Akamai
+www.stuartweitzman.ca*1.80.0.0*https://www.stuartweitzman.cn* goes to https://www.stuartweitzman.ca/eng/?ChangeLocation=Y
+false and (
+string.lower($request.header.host) == "www.stuartweitzman.com" or string.lower($request.header.host) == "www.stuartweitzman.ca") 
+and ($client.geo_country_code == "CN")	
+Redirect	^\/(.*)	https://www.stuartweitzman.cn/$1
+

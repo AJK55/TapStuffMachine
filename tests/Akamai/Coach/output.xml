@@ -1,0 +1,10 @@
+responseCode,responseMessage,threadName,failureMessage,bytes,URL,Connect
+200,OK,Thread Group 1-1,,4168,https://china.coach.com/,1637
+200,OK,Thread Group 1-1,,4168,https://china.coach.com/,1057
+200,OK,Thread Group 1-1,,73269,https://hongkong.coach.com/,198
+200,OK,Thread Group 1-1,,73297,https://hongkong.coach.com/,15
+200,OK,Thread Group 1-1,,74592,https://taiwan.coach.com/,301
+200,OK,Thread Group 1-1,,74595,https://taiwan.coach.com/,17
+200,OK,Thread Group 1-1,,73301,https://hongkong.coach.com/,85
+200,OK,Thread Group 1-1,,73277,https://hongkong.coach.com/,0
+200,OK,Thread Group 1-1,,106338,https://japan.coach.com/,95

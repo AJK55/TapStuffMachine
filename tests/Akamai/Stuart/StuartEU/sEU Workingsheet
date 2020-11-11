@@ -1,0 +1,82 @@
+Issues overview
+DE Redirects to https://eu.stuartweitzman.com/en/home/ DE
+ES Redirects to https://eu.stuartweitzman.com/en/home/ ES
+http://eu.stuartweitzman.com/maintenance_files/***https://eu.stuartweitzman.com/maintenance.html* 404
+http://eu.stuartweitzman.com/en_US/***https://eu.stuartweitzman.com/en/*Not working in Jmeter
+
+
+RuleID	Predicate	Redirect/Rewrite Pattern
+http_to_https	$request.is_secure == false	https://$host$1
+
+en_redirect	$request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/en/"}) == true	https://eu.stuartweitzman.com/en/home/
+
+fr_redirect	$client.geo_country_code == "FR" 
+and $request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/"}) == true	
+https://eu.stuartweitzman.com/fr/home/
+
+de_redirect	$client.geo_country_code == "DE" 
+and $request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/"}) == true	
+https://eu.stuartweitzman.com/de/home/
+
+es_redirect	$client.geo_country_code == "ES" 
+and $request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/"}) == true	
+https://eu.stuartweitzman.com/es/home/
+
+it_redirect	$client.geo_country_code == "IT" 
+and $request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/"}) == true	
+https://eu.stuartweitzman.com/it/home/
+
+ru_redirect	$client.geo_country_code == "RU" 
+and $request.header.host == "eu.stuartweitzman.com" and string.wildcard_match(string.lower($request.original_path),{"/"}) == true	
+https://eu.stuartweitzman.com/ru/home/
+
+france_redirect1	string.wildcard_match(string.lower($request.header.x-instart-loop),{"true"}) == false 
+and $client.geo_country_code == "FR" 
+and $request.cookie.preferred_locale == nil 
+and string.wildcard_match(string.lower($request.path),{"/fr/*"}) == false	$scheme://eu.stuartweitzman.com/fr/$2
+
+german_redirect1	string.wildcard_match(string.lower($request.header.x-instart-loop),{"true"}) == false 
+and $client.geo_country_code == "DE" 
+and $request.cookie.preferred_locale == nil 
+and string.wildcard_match(string.lower($request.path),{"/de/*"}) == false	$scheme://$host/de/$2
+
+italy_redirect1	string.wildcard_match(string.lower($request.header.x-instart-loop),{"true"}) == false 
+and $client.geo_country_code == "IT" and $request.cookie.preferred_locale == nil 
+and string.wildcard_match(string.lower($request.path),{"/it/*"}) == false	
+$scheme://$host/it/$2
+
+spain_redirect1	string.wildcard_match(string.lower($request.header.x-instart-loop),{"true"}) == false 
+and $client.geo_country_code == "ES" and $request.cookie.preferred_locale == nil 
+and string.wildcard_match(string.lower($request.path),{"/es/*"}) == false	
+$scheme://$host/es/$2
+
+russia_redirect1	string.wildcard_match(string.lower($request.header.x-instart-loop),{"true"}) == false 
+and $client.geo_country_code == "RU" and $request.cookie.preferred_locale == nil 
+and string.wildcard_match(string.lower($request.path),{"/ru/*"}) == false	
+$scheme://$host/ru/$2
+
+PM_27_rewrite22	false and $request.header.host == "eu.stuartweitzman.com" and 
+string.wildcard_match(string.lower($request.path), {"/maintenance.html","/maintenance_files/*"}) == false	
+/maintenance.html
+
+redirect_en_US_to_en	TRUE	https://$host/en$1
+
+P102616	($request.header.host == "eu.stuartweitzman.com") and string.wildcard_match($client.geo_country_code,{"CN"}) == true 
+and (string.wildcard_match($client.ip,{"66.37.45.254", "12.28.210.167","12.28.210.132","266.37.45.2", "66.37.45.2", "50.74.40.10", "209.160.216.131", "209.160.216.130", "38.96.129.19", "208.185.137.34", "156.146.1.14", "156.146.2.14", "218.255.84.74", "166.148.154.97", "12.173.145.210", "12.173.145.196", "50.205.34.2", "50.232.91.160", "66.55.52.160", "50.232.134.0",  "218.255.84.74", "118.143.78.50", "116.90.86.232", "221.186.68.194", "221.186.68.199", "116.247.69.66", "116.247.69.69", "118.201.206.50", "118.201.206.59", "118.201.206.60", "118.143.78.50", "218.118.95.230", "118.143.78.60", "218.188.95.229", "125.29.34.26", "106.185.23.51", "118.143.78.60", "218.188.95.229", "116.91.146.68", "58.221.166.14", "122.193.42.142", "211.129.72.247", "14.140.116.135"}) == false)	
+https://www.stuartweitzman.cn
+
+P102617	($request.header.host == "eu.stuartweitzman.com") and string.wildcard_match($client.geo_country_code,{"HK"}) == true 
+and (string.wildcard_match($client.ip,{"66.37.45.254", "12.28.210.167","12.28.210.132","266.37.45.2", "66.37.45.2", "50.74.40.10", "209.160.216.131", "209.160.216.130", "38.96.129.19", "208.185.137.34", "156.146.1.14", "156.146.2.14", "218.255.84.74", "166.148.154.97", "12.173.145.210", "12.173.145.196", "50.205.34.2", "50.232.91.160", "66.55.52.160", "50.232.134.0",  "218.255.84.74", "118.143.78.50", "116.90.86.232", "221.186.68.194", "221.186.68.199", "116.247.69.66", "116.247.69.69", "118.201.206.50", "118.201.206.59", "118.201.206.60", "118.143.78.50", "218.118.95.230", "118.143.78.60", "218.188.95.229", "125.29.34.26", "106.185.23.51", "118.143.78.60", "218.188.95.229", "116.91.146.68", "58.221.166.14", "122.193.42.142", "211.129.72.247", "14.140.116.135"}) == false)	
+https://www.stuartweitzman.hk
+
+P102618	($request.header.host == "eu.stuartweitzman.com") and string.wildcard_match($client.geo_country_code,{"TW"}) == true 
+and (string.wildcard_match($client.ip,{"66.37.45.254", "12.28.210.167","12.28.210.132","266.37.45.2", "66.37.45.2", "50.74.40.10", "209.160.216.131", "209.160.216.130", "38.96.129.19", "208.185.137.34", "156.146.1.14", "156.146.2.14", "218.255.84.74", "166.148.154.97", "12.173.145.210", "12.173.145.196", "50.205.34.2", "50.232.91.160", "66.55.52.160", "50.232.134.0",  "218.255.84.74", "118.143.78.50", "116.90.86.232", "221.186.68.194", "221.186.68.199", "116.247.69.66", "116.247.69.69", "118.201.206.50", "118.201.206.59", "118.201.206.60", "118.143.78.50", "218.118.95.230", "118.143.78.60", "218.188.95.229", "125.29.34.26", "106.185.23.51", "118.143.78.60", "218.188.95.229", "116.91.146.68", "58.221.166.14", "122.193.42.142", "211.129.72.247", "14.140.116.135"}) == false)	
+https://www.stuartweitzman.hk
+
+P102619	($request.header.host == "eu.stuartweitzman.com") and string.wildcard_match($client.geo_country_code,{"MO"}) == true 
+and (string.wildcard_match($client.ip,{"66.37.45.254", "12.28.210.167","12.28.210.132","266.37.45.2", "66.37.45.2", "50.74.40.10", "209.160.216.131", "209.160.216.130", "38.96.129.19", "208.185.137.34", "156.146.1.14", "156.146.2.14", "218.255.84.74", "166.148.154.97", "12.173.145.210", "12.173.145.196", "50.205.34.2", "50.232.91.160", "66.55.52.160", "50.232.134.0",  "218.255.84.74", "118.143.78.50", "116.90.86.232", "221.186.68.194", "221.186.68.199", "116.247.69.66", "116.247.69.69", "118.201.206.50", "118.201.206.59", "118.201.206.60", "118.143.78.50", "218.118.95.230", "118.143.78.60", "218.188.95.229", "125.29.34.26", "106.185.23.51", "118.143.78.60", "218.188.95.229", "116.91.146.68", "58.221.166.14", "122.193.42.142", "211.129.72.247", "14.140.116.135"}) == false)	
+https://www.stuartweitzman.hk
+
+P102620	($request.header.host == "eu.stuartweitzman.com") and string.wildcard_match($client.geo_country_code,{"JP"}) == true 
+and (string.wildcard_match($client.ip,{"66.37.45.254", "12.28.210.167","12.28.210.132","266.37.45.2", "66.37.45.2", "50.74.40.10", "209.160.216.131", "209.160.216.130", "38.96.129.19", "208.185.137.34", "156.146.1.14", "156.146.2.14", "218.255.84.74", "166.148.154.97", "12.173.145.210", "12.173.145.196", "50.205.34.2", "50.232.91.160", "66.55.52.160", "50.232.134.0",  "218.255.84.74", "118.143.78.50", "116.90.86.232", "221.186.68.194", "221.186.68.199", "116.247.69.66", "116.247.69.69", "118.201.206.50", "118.201.206.59", "118.201.206.60", "118.143.78.50", "218.118.95.230", "118.143.78.60", "218.188.95.229", "125.29.34.26", "106.185.23.51", "118.143.78.60", "218.188.95.229", "116.91.146.68", "58.221.166.14", "122.193.42.142", "211.129.72.247", "14.140.116.135"}) == false)	
+https://www.stuartweitzman.jp

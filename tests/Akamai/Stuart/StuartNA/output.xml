@@ -1,0 +1,17 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1587654317266,414,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1308,148,1,1,https://www.stuartweitzman.ca/fr/,414,0,325
+1587654317681,656,HTTP Request,302,Moved Temporarily,Thread Group 1-1,text,true,,1741,155,1,1,https://www.stuartweitzman.com,656,0,273
+1587654318337,229,HTTP Request,302,Moved Temporarily,Thread Group 1-1,text,true,,1721,155,1,1,https://www.stuartweitzman.com,229,0,0
+1587654318566,427,HTTP Request,302,Moved Temporarily,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.stuartweitzman.cn/,1933,154,1,1,https://www.stuartweitzman.ca,427,0,0
+1587654318994,99,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,154,1,1,https://www.stuartweitzman.com,99,0,0
+1587654319094,86,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1301,153,1,1,https://www.stuartweitzman.ca,86,0,0
+1587654319180,87,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,157,1,1,https://www.stuartweitzman.com,87,0,0
+1587654319268,377,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1301,156,1,1,https://www.stuartweitzman.ca,377,0,285
+1587654319646,88,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,156,1,1,https://www.stuartweitzman.com,88,0,0
+1587654319734,95,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1301,155,1,1,https://www.stuartweitzman.ca,95,0,0
+1587654319829,359,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,155,1,1,https://www.stuartweitzman.com,359,0,269
+1587654320189,99,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1297,154,1,1,https://www.stuartweitzman.ca,99,0,0
+1587654320288,221,HTTP Request,302,Moved Temporarily,Thread Group 1-1,text,true,,1739,156,1,1,https://www.stuartweitzman.com,221,0,0
+1587654320509,93,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,154,1,1,https://www.stuartweitzman.com,93,0,0
+1587654320602,232,HTTP Request,302,Moved Temporarily,Thread Group 1-1,text,true,,1723,157,1,1,https://www.stuartweitzman.com,232,0,0
+1587654320834,87,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1303,155,1,1,https://www.stuartweitzman.com,87,0,0

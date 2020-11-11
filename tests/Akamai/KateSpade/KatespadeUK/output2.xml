@@ -1,0 +1,25 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1601064079936,232,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1380,144,1,1,https://www.katespade.co.uk/uk/handbags/icat/handbags,232,0,162
+1601064080169,75,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1371,136,1,1,https://www.katespade.co.uk/uk/sale/icat/sale,75,0,53
+1601064080245,76,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1383,150,1,1,https://www.katespade.co.uk/uk/accessories/icat/accessories,76,0,56
+1601064080322,68,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1383,148,1,1,https://www.katespade.co.uk/uk/accessories/tech/icat/tech,68,0,51
+1601064080390,75,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1401,165,1,1,https://www.katespade.co.uk/uk/accessories/wallets+wristlets-/icat/wallets,75,0,55
+1601064080466,73,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1381,142,1,1,https://www.katespade.co.uk/uk/jewelry/icat/jewelry,73,0,54
+1601064080539,63,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1389,150,1,1,https://www.katespade.co.uk/uk/jewelry/watches/icat/watches,63,0,47
+1601064080603,76,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1395,156,1,1,https://www.katespade.co.uk/uk/handbags/cross-body/icat/crossbody,76,0,57
+1601064080679,72,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1371,163,1,1,https://www.katespade.co.uk/uk/sale/handbags/icat/salehandbagsandwallets,72,0,54
+1601064080752,72,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1384,164,1,1,https://www.katespade.co.uk/uk/new-arrivals/icat/newarrivals?temp=viewAll,72,0,53
+1601064080825,69,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1393,156,1,1,https://www.katespade.co.uk/uk/home/desk+stationery/icat/tabletop,69,0,51
+1601064080895,80,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1391,154,1,1,https://www.katespade.co.uk/uk/jewelry/bracelets/icat/bracelets,80,0,58
+1601064080976,71,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1390,152,1,1,https://www.katespade.co.uk/uk/jewelry/earrings/icat/earrings,71,0,50
+1601064081047,67,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1396,171,1,1,https://www.katespade.co.uk/uk/collections/ksny-x-minnie-mouse-/icat/minniemouse,67,0,49
+1601064081115,64,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1377,138,1,1,https://www.katespade.co.uk/uk/shoes/icat/shoes,64,0,46
+1601064081179,79,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1390,147,1,1,https://www.katespade.co.uk/uk/handbags/totes/icat/totes,79,0,63
+1601064081259,77,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1380,144,1,1,https://www.katespade.co.uk/uk/clothing/icat/clothing,77,0,58
+1601064081337,72,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1393,168,1,1,https://www.katespade.co.uk/uk/new-arrivals/handbags/icat/newarrivalshandbags,72,0,54
+1601064081409,83,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1377,142,1,1,https://www.katespade.co.uk/uk/gifts/icat/giftguide,83,0,62
+1601064081492,71,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1394,158,1,1,https://www.katespade.co.uk/uk/handbags/shoulder-bags/icat/shoulder,71,0,50
+1601064081563,76,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1376,136,1,1,https://www.katespade.co.uk/uk/home/icat/home,76,0,58
+1601064081640,74,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1388,151,1,1,https://www.katespade.co.uk/uk/clothing/dresses/icat/dresses,74,0,52
+1601064081714,69,HTTP Request,301,Moved Permanently,Thread Group 1-1,,true,,1384,151,1,1,https://www.katespade.co.uk/uk/new-arrivals/icat/newarrivals,69,0,50
+1601064081784,568,HTTP Request,301,Moved Permanently,Thread Group 1-1,text,true,,3859,230,1,1,https://www.katespade.co.uk/uk/sale-preview/icat/newpromotion&utm_source=WK24_SALE_PREVIEW&utm_medium=email&utm_campaign=salepreviewdec2017,565,0,52

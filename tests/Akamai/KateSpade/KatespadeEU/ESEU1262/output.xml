@@ -1,0 +1,41 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1601065425718,269,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb//,139889,296,1,1,https://www.katespade.com/,67,0,50
+1601065425718,67,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1279,146,1,1,https://katespade.com/,67,0,50
+1601065425786,201,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,138610,150,1,1,https://www.katespade.com/,133,0,46
+1601065425987,243,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/keychains//,157643,320,1,1,https://www.katespade.com/accessories/,21,0,0
+1601065425987,21,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1291,158,1,1,https://katespade.com/accessories/,21,0,0
+1601065426008,222,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,156352,162,1,1,https://www.katespade.com/accessories/,150,0,0
+1601065426230,352,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/laptop-bags//,338202,372,1,1,https://www.katespade.com/accessories/keychains-bag-accessories/,23,0,0
+1601065426230,23,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1317,184,1,1,https://katespade.com/accessories/keychains-bag-accessories/,23,0,0
+1601065426253,329,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,336885,188,1,1,https://www.katespade.com/accessories/keychains-bag-accessories/,214,0,0
+1601065426582,220,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/makeup-bags//,202285,354,1,1,https://www.katespade.com/accessories/tech/laptop-bags/,26,0,0
+1601065426582,26,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1308,175,1,1,https://katespade.com/accessories/tech/laptop-bags/,26,0,0
+1601065426608,194,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,200977,179,1,1,https://www.katespade.com/accessories/tech/laptop-bags/,176,0,0
+1601065426803,308,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/phone-cases//,164736,344,1,1,https://www.katespade.com/accessories/makeup-bags/,18,0,0
+1601065426803,18,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1303,170,1,1,https://katespade.com/accessories/makeup-bags/,18,0,0
+1601065426821,290,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,163433,174,1,1,https://www.katespade.com/accessories/makeup-bags/,188,0,0
+1601065427112,236,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/scarves-hats-belts//,347988,330,1,1,https://www.katespade.com/accessories/tech/,21,0,0
+1601065427112,21,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1296,163,1,1,https://katespade.com/accessories/tech/,21,0,0
+1601065427133,215,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,346692,167,1,1,https://www.katespade.com/accessories/tech/,142,0,0
+1601065427348,225,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/sunglasses//,342983,358,1,1,https://www.katespade.com/accessories/scarves-hats-belts/,17,0,0
+1601065427348,17,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1310,177,1,1,https://katespade.com/accessories/scarves-hats-belts/,17,0,0
+1601065427365,208,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,341673,181,1,1,https://www.katespade.com/accessories/scarves-hats-belts/,133,0,0
+1601065427574,272,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/tech-accessories//,390333,374,1,1,https://www.katespade.com/accessories/sunglasses-reading-glasses/,17,0,0
+1601065427574,17,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1318,185,1,1,https://katespade.com/accessories/sunglasses-reading-glasses/,17,0,0
+1601065427591,255,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,389015,189,1,1,https://www.katespade.com/accessories/sunglasses-reading-glasses/,223,0,0
+1601065427846,381,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/accessories/watches//,349951,507,1,1,https://www.katespade.com/accessories/tech/,80,0,53
+1601065427846,80,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1301,168,1,1,https://katespade.com/accesssories/maintech/,80,0,53
+1601065427926,99,HTTP Request-1,301,Moved Permanently,Thread Group 1-1,,true,,1970,172,1,1,https://www.katespade.com/accesssories/maintech/,99,0,56
+1601065428025,202,HTTP Request-2,200,OK,Thread Group 1-1,text,true,,346680,167,1,1,https://www.katespade.com/accessories/tech/,123,0,0
+1601065428227,246,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/clothing//,345075,336,1,1,https://www.katespade.com/accessories/watches/,23,0,0
+1601065428227,23,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1299,166,1,1,https://katespade.com/accessories/watches/,23,0,0
+1601065428250,223,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,343776,170,1,1,https://www.katespade.com/accessories/watches/,135,0,0
+1601065428473,250,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/clothing/coats-jackets//,353753,314,1,1,https://www.katespade.com/clothing/,21,0,0
+1601065428473,21,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1288,155,1,1,https://katespade.com/clothing/,21,0,0
+1601065428494,229,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,352465,159,1,1,https://www.katespade.com/clothing/,148,0,0
+1601065428724,152,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/clothing/dresses//,147355,350,1,1,https://www.katespade.com/clothing/jackets-outerwear/,21,0,0
+1601065428724,21,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1306,173,1,1,https://katespade.com/clothing/jackets-outerwear/,21,0,0
+1601065428745,131,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,146049,177,1,1,https://www.katespade.com/clothing/jackets-outerwear/,115,0,0
+1601065428876,256,HTTP Request,200,OK,Thread Group 1-1,text,false,Test failed: headers expected to contain /https://www.katespade.co.uk/en-gb/clothing/jeans-trousers//,356889,350,1,1,https://www.katespade.com/clothing/dresses-jumpsuits/,18,0,0
+1601065428876,18,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,,true,,1306,173,1,1,https://katespade.com/clothing/dresses-jumpsuits/,18,0,0
+1601065428894,238,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,355583,177,1,1,https://www.katespade.com/clothing/dresses-jumpsuits/,132,0,0

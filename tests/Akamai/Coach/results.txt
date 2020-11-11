@@ -1,0 +1,70 @@
+responseCode,responseMessage,threadName,failureMessage,bytes,URL,Connect
+Non HTTP response code: java.io.IOException,Non HTTP response message: Exceeded maximum number of redirects: 20,Thread Group 1-12,Test failed: text expected to contain /Sites-Coach_US-Site/en_CA/,9021,https://ca.coach.com/,69
+www.coach.com,,2.58.36.0
+
+GET https://ca.coach.com/
+X-Forwarded-For: 2.58.36.0
+Host: ca.coach.com
+
+Non HTTP response code: java.io.IOException,Non HTTP response message: Exceeded maximum number of redirects: 20,Thread Group 1-14,Test failed: text expected to contain /Sites-Coach_US-Site/en_CA/,9373,https://ca.coach.com/?=googleshopping,65
+ca.coach.com,,2.58.36.0
+
+GET https://ca.coach.com/?=googleshopping
+X-Forwarded-For: 2.58.36.0
+Host: ca.coach.com
+
+Non HTTP response code: java.io.IOException,Non HTTP response message: Exceeded maximum number of redirects: 20,Thread Group 1-11,Test failed: text expected to contain /Sites-Coach_US-Site/en_CA/,9021,https://ca.coach.com/,66
+www.coach.com,?=googleshopping,2.58.36.0
+
+GET https://ca.coach.com/
+X-Forwarded-For: 2.58.36.0
+Host: ca.coach.com
+
+Non HTTP response code: java.io.IOException,Non HTTP response message: Exceeded maximum number of redirects: 20,Thread Group 1-13,Test failed: text expected to contain /Sites-Coach_US-Site/en_CA/,9373,https://ca.coach.com/?=googleshopping,71
+ca.coach.com,?=googleshopping,2.58.36.0
+
+GET https://ca.coach.com/?=googleshopping
+X-Forwarded-For: 2.58.36.0
+Host: ca.coach.com
+
+200,OK,Thread Group 1-32,Test failed: text expected to contain /Coach_WM/,213892,https://www.coach.com/,82
+www.coach.com,,202.144.196.0
+
+GET https://www.coach.com/
+X-Forwarded-For: 202.144.196.0
+Host: www.coach.com
+
+200,OK,Thread Group 1-17,Test failed: text expected to contain /'siteCountry': 'SG'/,175743,https://fr.coach.com/,66
+www.coach.com,/,8.209.128.0
+
+GET https://fr.coach.com/
+X-Forwarded-For: 8.209.128.0
+Host: fr.coach.com
+
+200,OK,Thread Group 1-30,Test failed: text expected to contain /en-GB/,175743,https://fr.coach.com/,84
+www.coach.com,,46.137.98.131
+
+GET https://fr.coach.com/
+X-Forwarded-For: 46.137.98.131
+Host: fr.coach.com
+
+429,Too Many Requests,Thread Group 1-24,Response was null,2126,https://coachaustralia.com/,85
+www.coach.com,,3.104.0.0
+
+GET https://coachaustralia.com/
+X-Forwarded-For: 3.104.0.0
+Host: coachaustralia.com
+
+504,Gateway Time-out,Thread Group 1-22,Test failed: text expected to contain /es-MX/,1779,https://mx.coach.com/src=googleshopping,72
+www.coach.com,src=googleshopping,8.14.224.0
+
+GET https://mx.coach.com/src=googleshopping
+X-Forwarded-For: 8.14.224.0
+Host: mx.coach.com
+
+504,Gateway Time-out,Thread Group 1-31,Test failed: text expected to contain /es-MX/,1416,https://mx.coach.com/,102
+mexico.coach.com,,,
+
+GET https://mx.coach.com/
+X-Forwarded-For: 
+Host: mx.coach.com

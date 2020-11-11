@@ -1,0 +1,560 @@
+On Instart
+eu.katespade.com/en-de,,https://eu.katespade.com/de-de,de_redirect,not working in jemeter
+
+RuleID	Predicate	Redirect/Rewrite	InstartPathPattern	Redirect/Rewrite Pattern	StatusCode
+ie_redirect	
+string.wildcard_match($client.ip,{"18.203.61.76","18.203.176.135","52.17.197.221"}) == false 
+and string.wildcard_match(string.lower($request.header.host),{"www.katespade.co.uk"}) == true 
+and $client.geo_country_code == "IE"	
+Redirect		https://eu.katespade.com/en-ie/	301
+
+china_redirect	
+($request.header.host == "eu.katespade.com" or $request.header.host == "www.katespade.co.uk") 
+and ($client.geo_country_code == "CN")	
+Redirect	^(.*)	https://www.katespade.cn$uri	301
+
+HK_redirect	
+($request.header.host == "eu.katespade.com" or $request.header.host == "www.katespade.co.uk") 
+and ($client.geo_country_code == "HK")	
+Redirect	^(.*)	http://www.katespade.hk$uri	301
+
+Taiwan_redirect	
+($request.header.host == "eu.katespade.com" or $request.header.host == "www.katespade.co.uk") 
+and ($client.geo_country_code == "TW")	
+Redirect	^(.*)	https://www.katespade.cn$uri	301
+
+Macau_redirect	
+($request.header.host == "eu.katespade.com" or $request.header.host == "www.katespade.co.uk") 
+and ($client.geo_country_code == "MO")	
+Redirect	^(.*)	https://www.katespade.cn$uri	301
+
+Japan_redirect	
+($request.header.host == "eu.katespade.com" or $request.header.host == "www.katespade.co.uk") 
+and ($client.geo_country_code == "JP")	
+Redirect	^(.*)	https://www.katespade.jp$uri	301
+
+de_redirect	
+false and string.wildcard_match(string.lower($request.header.host),{"eu.katespade.com"}) == true 
+and string.wildcard_match(string.lower($request.path),{"/en-de","/en-de/*"}) == true 
+and string.wildcard_match(string.lower($request.path),{"/en-de/404","/en-de/404/"}) == false	
+Redirect	^/en-de(.*)	https://eu.katespade.com/de-de$1	301
+
+katespade.co.uk_to_www.katespade.co.uk	
+$request.header.host == "katespade.co.uk"	
+Redirect	^(.*)	https://www.katespade.co.uk$1	301
+
+www.katespade.co.uk_misc_redirects	
+$request.header.host == "www.katespade.co.uk"	
+Redirect	^/uk/category-landing-page/shoes-landing-page/page/shoes_landingpage$	/en-gb/shoes/	301
+
+www.katespade.co.uk_misc_redirects	
+$request.header.host == "www.katespade.co.uk"	
+Redirect	^/uk/pcat/deliverymethod$	/en-gb/customer-care/shipping-methods.html	301
+
+www.katespade.co.uk_misc_redirects	
+$request.header.host == "www.katespade.co.uk"	
+Redirect	^/uk/payment-options/page/paymentoptions_fra$	/en-gb/customer-care/payment-options.html	301
+
+www.katespade.co.uk_misc_redirects	
+$request.header.host == "www.katespade.co.uk"	
+Redirect	^/wishlist/wishlist$	/en-gb/wishlist/	301
+
+www.katespade.co.uk_homepage_redirect_for_specific_paths	
+$request.header.host == "www.katespade.co.uk" 
+and string.wildcard_match(string.lower($request.path),{
+"/page/search",
+"/register/login",
+"/uk/page/search",
+"/shopcart/shopcart",
+"/shopcart/shopcart/empty",
+"/checkout/billingaddressadd",
+"/wishlist/wishlist/empty",
+"/checkout/login",
+"/uk/scat/blog",
+"/checkout/orderreceipt",
+"/page/home",
+"/page/404",
+"/checkout/ordersummary",
+"/checkout/deliveryaddressadd",
+"/myaccount/orderhistory",
+"/passwordreset/",
+"/register/billingaddressadd",
+"/myaccount/myaccount",
+"/uk/size-guide/shoes/page/size_shoes&layout=noheaders",
+"/shopcart/shopcart/empty/error",
+"/uk/page/404",
+"/uk/size-guide/size-guide-clothing/page/size_clothing&layout=noheaders",
+"/myaccount/orderdetail",
+"/uk/landing-switcher/page/landingswitcher",
+"/uk/page/home"
+}) == true	
+Redirect	^(.*)	https://www.katespade.co.uk/en-gb/?	301
+
+www.katespade.co.uk_homepage_redirect_for_path_and_query_string_match	
+$request.header.host == "www.katespade.co.uk" 
+and ((string.wildcard_match(string.lower($request.path),{"","/","/uk/page/home"}) == true 
+and $request.query == "int_redirect=true") 
+or (string.wildcard_match(string.lower($request.path),{
+"/page/home",
+"/page/search"}) == true 
+and $request.query == "setlang=ae&setlocn=uk") 
+or (string.lower($request.path) == "/page/home" 
+and $request.query == "layout=minicart&open=1") 
+or (string.lower($request.path) == "/bin/venda" 
+and $request.query == "ex=co_disp-view&page=home"))	
+Redirect	^(.*)	https://www.katespade.co.uk/en-gb/?	301
+
+www.katespade.co.uk_homepage_redirect_for_wildcard_paths	
+$request.header.host == "www.katespade.co.uk" 
+and string.wildcard_match(string.lower($request.path),{
+"/uk/scat/blog",
+"/uk/columns",
+"/uk/deliberate-polish",
+"/uk/places-to-go-people-to-see",
+"/uk/featured",
+"/uk/city-guides",
+"/uk/whats-new",
+"/uk/on-purpose",
+"/uk/the-style-spy",
+"/uk/blog-news-release",
+"/uk/from-the-desk-of-deborah-lloyd",
+"/uk/hot-off-the-press",
+"/uk/let+039s-mosey",
+"/uk/how-tos",
+"/uk/music-mondays",
+"/uk/nip-it-in-the-bud",
+"/uk/when-life-gives-you-lemons",
+"/uk/scat/blog/*",
+"/uk/columns/*",
+"/uk/deliberate-polish/*",
+"/uk/places-to-go-people-to-see/*",
+"/uk/featured/*",
+"/uk/city-guides/*",
+"/uk/whats-new/*",
+"/uk/on-purpose/*",
+"/uk/the-style-spy/*",
+"/uk/blog-news-release/*",
+"/uk/from-the-desk-of-deborah-lloyd/*",
+"/uk/hot-off-the-press/*",
+"/uk/let+039s-mosey/*",
+"/uk/how-tos/*",
+"/uk/music-mondays/*",
+"/uk/nip-it-in-the-bud/*",
+"/uk/when-life-gives-you-lemons/*"}) == true	
+Redirect	^(.*)	https://www.katespade.co.uk/en-gb/	301
+
+fr_homepage_redirect	
+$request.header.host == "www.katespade.co.uk" 
+and string.wildcard_match(string.lower($request.path),{
+"/fra/page/home",
+"/fra/kate-spade-paris",
+"/fra/nip-it-in-the-bud",
+"/fra/notre-boutique-parisienne",
+"/fra/trouver-une-boutique",
+"/fra/deliberate-polish",
+"/fra/things-we-love",
+"/fra/places-to-go-people-to-see",
+"/fra/city-guides",
+"/fra/on-purpose",
+"/fra/the-style-spy",
+"/fra/blog-news-release",
+"/fra/hot-off-the-press",
+"/fra/page/home/*",
+"/fra/kate-spade-paris/*",
+"/fra/nip-it-in-the-bud/*",
+"/fra/notre-boutique-parisienne/*",
+"/fra/trouver-une-boutique/*",
+"/fra/deliberate-polish/*",
+"/fra/things-we-love/*",
+"/fra/places-to-go-people-to-see/*",
+"/fra/city-guides/*",
+"/fra/on-purpose/*",
+"/fra/the-style-spy/*",
+"/fra/blog-news-release/*",
+"/fra/hot-off-the-press/*"}) == true	
+Redirect	^(.*)	https://eu.katespade.com/en-fr/	301
+
+eu_homepage_redirect	
+$request.header.host == "www.katespade.co.uk" and 
+string.wildcard_match(string.lower($request.path),{
+"/eur/page/home",
+"/ita/page/home",
+"/uk/deu/page/home",
+"/uk/esp/page/home",
+"/uk/ita/page/home",
+"/eur/deliberate-polish",
+"/eur/things-we-love",
+"/eur/places-to-go-people-to-see",
+"/eur/whats-new","/eur/on-purpose",
+"/eur/the-style-spy",
+"/eur/blog-news-release",
+"/eur/page/home/*",
+"/ita/page/home/*",
+"/uk/deu/page/home/*",
+"/uk/esp/page/home/*",
+"/uk/ita/page/home/*",
+"/eur/deliberate-polish/*",
+"/eur/things-we-love/*",
+"/eur/places-to-go-people-to-see/*",
+"/eur/whats-new/*",
+"/eur/on-purpose/*",
+"/eur/the-style-spy/*",
+"/eur/blog-news-release/*"}) == true	
+Redirect	^(.*)	https://eu.katespade.com/de-de/	301
+
+store_locator_redirect_uk	
+$request.header.host == "www.katespade.co.uk" and 
+string.wildcard_match(string.lower($request.path),{
+"/uk/store-locator",
+"/uk/store-locator/*",
+"/uk/uk-store-locator",
+"/uk/uk-store-locator/*",
+"/uk/scat/storelocator",
+"/uk/scat/storelocator/*",
+"/uk/stores/scat/philippines",
+"/uk/stores/scat/philippines/*",
+"/uk/alabama",
+"/uk/arizona",
+"/uk/brazil",
+"/uk/california",
+"/uk/canada",
+"/uk/chiba",
+"/uk/china",
+"/uk/colorado",
+"/uk/connecticut",
+"/uk/delaware",
+"/uk/eur/stores/scat/hongkong",
+"/uk/florida",
+"/uk/france",
+"/uk/fukuoka",
+"/uk/georgia",
+"/uk/guam",
+"/uk/hawaii",
+"/uk/hong-kong",
+"/uk/hyogo",
+"/uk/illinois",
+"/uk/indiana",
+"/uk/indonesia",
+"/uk/ireland",
+"/uk/japan",
+"/uk/kate-spade-paris",
+"/uk/kuwait",
+"/uk/london",
+"/uk/malaysia",
+"/uk/maryland",
+"/uk/massachusetts",
+"/uk/mexico",
+"/uk/michigan",
+"/uk/minnesota",
+"/uk/missouri",
+"/uk/nebraska",
+"/uk/nevada",
+"/uk/new-jersey",
+"/uk/new-york",
+"/uk/north-carolina",
+"/uk/ohio",
+"/uk/oxfordshire",
+"/uk/pennsylvania",
+"/uk/philippines",
+"/uk/rio-grande",
+"/uk/shizuoka",
+"/uk/singapore",
+"/uk/south-carolina",
+"/uk/taiwan",
+"/uk/tennessee",
+"/uk/texas",
+"/uk/thailand",
+"/uk/tokyo",
+"/uk/turkey",
+"/uk/uae",
+"/uk/united-states",
+"/uk/vermont",
+"/uk/virginia",
+"/uk/washington",
+"/uk/washington-dc",
+"/uk/wisconsin",
+"/uk/alabama/*",
+"/uk/arizona/*",
+"/uk/brazil/*",
+"/uk/california/*",
+"/uk/canada/*",
+"/uk/chiba/*",
+"/uk/china/*",
+"/uk/colorado/*",
+"/uk/connecticut/*",
+"/uk/delaware/*",
+"/uk/eur/stores/scat/hongkong",
+"/uk/florida/*",
+"/uk/france/*",
+"/uk/fukuoka/*",
+"/uk/georgia/*",
+"/uk/guam/*",
+"/uk/hawaii/*",
+"/uk/hong-kong/*",
+"/uk/hyogo/*",
+"/uk/illinois/*",
+"/uk/indiana/*",
+"/uk/indonesia/*",
+"/uk/ireland/*",
+"/uk/japan/*",
+"/uk/kate-spade-paris/*",
+"/uk/kuwait/*",
+"/uk/london/*",
+"/uk/malaysia/*",
+"/uk/maryland/*",
+"/uk/massachusetts/*",
+"/uk/mexico/*",
+"/uk/michigan/*",
+"/uk/minnesota/*",
+"/uk/missouri/*",
+"/uk/nebraska/*",
+"/uk/nevada/*",
+"/uk/new-jersey/*",
+"/uk/new-york/*",
+"/uk/north-carolina/*",
+"/uk/ohio/*",
+"/uk/oxfordshire/*",
+"/uk/pennsylvania/*",
+"/uk/philippines/*",
+"/uk/rio-grande/*",
+"/uk/shizuoka/*",
+"/uk/singapore/*",
+"/uk/south-carolina/*",
+"/uk/taiwan/*",
+"/uk/tennessee/*",
+"/uk/texas/*",
+"/uk/thailand/*",
+"/uk/tokyo/*",
+"/uk/turkey/*",
+"/uk/uae/*",
+"/uk/united-states/*",
+"/uk/vermont/*",
+"/uk/virginia/*",
+"/uk/washington/*",
+"/uk/washington-dc/*",
+"/uk/wisconsin/*"}) 
+== true	Redirect	^(.*)	https://www.katespade.co.uk/en-gb/stores/	301
+
+store_locator_redirect_fr	
+$request.header.host == "www.katespade.co.uk" and string.wildcard_match(string.lower($request.path),{
+"/fra/alabama",
+"/fra/arizona",
+"/fra/brazil",
+"/fra/california",
+"/fra/canada",
+"/fra/chiba",
+"/fra/china",
+"/fra/colorado",
+"/fra/connecticut",
+"/fra/delaware",
+"/fra/florida",
+"/fra/france",
+"/fra/georgia",
+"/fra/guam",
+"/fra/hong-kong",
+"/fra/illinois",
+"/fra/indiana",
+"/fra/indonesia",
+"/fra/ireland",
+"/fra/kuwait",
+"/fra/london",
+"/fra/malaysia",
+"/fra/maryland",
+"/fra/massachusetts",
+"/fra/mexico",
+"/fra/minnesota",
+"/fra/missouri",
+"/fra/nebraska",
+"/fra/nevada",
+"/fra/new-jersey",
+"/fra/new-york",
+"/fra/ohio",
+"/fra/oxfordshire",
+"/fra/pennsylvania",
+"/fra/philippines",
+"/fra/scat/storelocator",
+"/fra/shizuoka",
+"/fra/singapore",
+"/fra/south-carolina",
+"/fra/store-locator/",
+"/fra/stry/katespadenewyorkknoxstree",
+"/fra/taiwan",
+"/fra/tennessee",
+"/fra/texas",
+"/fra/thailand",
+"/fra/tokyo",
+"/fra/turkey",
+"/fra/turquie",
+"/fra/uae",
+"/fra/uk-store-locator/",
+"/fra/vermont",
+"/fra/virginia",
+"/fra/washington",
+"/fra/washington-dc",
+"/fra/wisconsin",
+"/fra/alabama/*",
+"/fra/arizona/*",
+"/fra/brazil/*",
+"/fra/california/*",
+"/fra/canada/*",
+"/fra/chiba/*",
+"/fra/china/*",
+"/fra/colorado/*",
+"/fra/connecticut/*",
+"/fra/delaware/*",
+"/fra/florida/*",
+"/fra/france/*",
+"/fra/georgia/*",
+"/fra/guam/*",
+"/fra/hong-kong/*",
+"/fra/illinois/*",
+"/fra/indiana/*",
+"/fra/indonesia/*",
+"/fra/ireland/*",
+"/fra/kuwait/*",
+"/fra/london/*",
+"/fra/malaysia/*",
+"/fra/maryland/*",
+"/fra/massachusetts/*",
+"/fra/mexico/*",
+"/fra/minnesota/*",
+"/fra/missouri/*",
+"/fra/nebraska/*",
+"/fra/nevada/*",
+"/fra/new-jersey/*",
+"/fra/new-york/*",
+"/fra/ohio/*",
+"/fra/oxfordshire/*",
+"/fra/pennsylvania/*",
+"/fra/philippines/*",
+"/fra/scat/storelocator",
+"/fra/shizuoka/*",
+"/fra/singapore/*",
+"/fra/south-carolina/*",
+"/fra/store-locator/",
+"/fra/stry/katespadenewyorkknoxstree",
+"/fra/taiwan/*",
+"/fra/tennessee/*",
+"/fra/texas/*",
+"/fra/thailand/*",
+"/fra/tokyo/*",
+"/fra/turkey/*",
+"/fra/turquie/*",
+"/fra/uae/*",
+"/fra/uk-store-locator/",
+"/fra/vermont/*",
+"/fra/virginia/*",
+"/fra/washington/*",
+"/fra/washington-dc/*",
+"/fra/wisconsin/*"}
+) == true	Redirect	^(.*)	https://eu.katespade.com/en-fr/stores/	301
+
+store_locator_redirect_eur	
+$request.header.host == "www.katespade.co.uk" and string.wildcard_match(string.lower($request.path),{
+"/eur/arizona",
+"/eur/brazil",
+"/eur/california",
+"/eur/canada",
+"/eur/china",
+"/eur/florida",
+"/eur/france",
+"/eur/fukuoka",
+"/eur/georgia",
+"/eur/guam",
+"/eur/hawaii",
+"/eur/hong-kong",
+"/eur/hyogo",
+"/eur/illinois",
+"/eur/indiana",
+"/eur/indonesia",
+"/eur/ireland",
+"/eur/kuwait",
+"/eur/london",
+"/eur/malaysia",
+"/eur/maryland",
+"/eur/massachusetts",
+"/eur/mexico",
+"/eur/minnesota",
+"/eur/missouri",
+"/eur/nebraska",
+"/eur/nevada",
+"/eur/new-jersey",
+"/eur/new-york",
+"/eur/ohio",
+"/eur/ohio",
+"/eur/oxfordshire",
+"/eur/pennsylvania",
+"/eur/philippines",
+"/eur/scat/storelocator*",
+"/eur/shizuoka",
+"/eur/singapore",
+"/eur/store-locator",
+"/eur/store-locator/page/storelocator",
+"/eur/taiwan",
+"/eur/tennessee",
+"/eur/texas",
+"/eur/thailand",
+"/eur/tokyo",
+"/eur/turkey",
+"/eur/uae",
+"/eur/vermont",
+"/eur/virginia",
+"/eur/washington",
+"/eur/washington-dc",
+"/eur/wisconsin",
+"/eur/arizona/*",
+"/eur/brazil/*",
+"/eur/california/*",
+"/eur/canada/*",
+"/eur/china/*",
+"/eur/florida/*",
+"/eur/france/*",
+"/eur/fukuoka/*",
+"/eur/georgia/*",
+"/eur/guam/*",
+"/eur/hawaii/*",
+"/eur/hong-kong/*",
+"/eur/hyogo/*",
+"/eur/illinois/*",
+"/eur/indiana/*",
+"/eur/indonesia/*",
+"/eur/ireland/*",
+"/eur/kuwait/*",
+"/eur/london/*",
+"/eur/malaysia/*",
+"/eur/maryland/*",
+"/eur/massachusetts/*",
+"/eur/mexico/*",
+"/eur/minnesota/*",
+"/eur/missouri/*",
+"/eur/nebraska/*",
+"/eur/nevada/*",
+"/eur/new-jersey/*",
+"/eur/new-york/*",
+"/eur/ohio/*",
+"/eur/ohio/*",
+"/eur/oxfordshire/*",
+"/eur/pennsylvania/*",
+"/eur/philippines/*",
+"/eur/scat/storelocator*",
+"/eur/shizuoka/*",
+"/eur/singapore/*",
+"/eur/store-locator/*",
+"/eur/store-locator/page/storelocator",
+"/eur/taiwan/*",
+"/eur/tennessee/*",
+"/eur/texas/*",
+"/eur/thailand/*",
+"/eur/tokyo/*",
+"/eur/turkey/*",
+"/eur/uae/*",
+"/eur/vermont/*",
+"/eur/virginia/*",
+"/eur/washington/*",
+"/eur/washington-dc/*",
+"/eur/wisconsin/*"}
+) == true	Redirect	^(.*)	https://eu.katespade.com/en-de/stores/	301
+
+bing_xml_rewrite_21693	
+false and string.wildcard_match(string.lower($request.path),{"/bingsiteauth.xml"}) == true	
+Rewrite	^(.*)	/katespade$1	
