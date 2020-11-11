@@ -1,0 +1,65 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+       "label":"Desktop",
+       "width":1024,
+       "height":768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Coach Homepage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://www.coach.com/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "div.bx-slab > div",
+      "delay": 5000,
+      "hideSelectors": [
+        "#wrapper > div.row.global-promo > div > div > div.shipping-msg.msg1.modtext-white > a",
+        "#main > article > div:nth-child(3) > div.product_slider.product-slider--lifestyle-right > div.product_slider__products > div > div.swiper-wrapper > div:nth-child(3)",
+        "#main > article > div:nth-child(4) > div.product_slider.product-slider--lifestyle-left > div.product_slider__products > div > div.swiper-wrapper > div:nth-child(3)"
+      ],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": [],
+      "postInteractionWait": 0,
+      "selectors": [
+        "html"
+      ],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
