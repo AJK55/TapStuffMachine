@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "6effa013-3ca7-4c42-8e1e-eaa0142de1e6",
+		"name": "Akamai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Akamai Header",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "490305ab-5b15-4acf-b848-7fcc1687007e",
+						"exec": [
+							"pass = true;\r",
+							"fail = false;\r",
+							"//var a = pm.environment.get(\"url\")\r",
+							"var a = pm.request.url.getRaw()\r",
+							"\r",
+							"pm.test(a + ' = Header Contains X-Akamai-Staging = ESSL', function () {\r",
+							"   pm.response.to.be.header(\"X-Akamai-Staging\", \"ESSL\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200 for \" + a, function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

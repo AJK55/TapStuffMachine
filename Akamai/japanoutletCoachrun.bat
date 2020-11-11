@@ -1,0 +1,1 @@
+newman run Akamai.postman_collection.json -e Akamai.postman_environment.json -d ./CoachURLs/japanoutletCoachUrlList.csv -r cli,html --reporter-html-export "./newman/japanoutletreport.html"

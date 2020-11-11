@@ -1,0 +1,14 @@
+call chinaCoachrun.bat
+call deCoachrun.bat
+call esCoachrun.bat
+call frCoachrun.bat
+call hongkongCoachrun.bat
+call itCoachrun.bat
+call japanCoachrun.bat
+call japanoutletCoachrun.bat
+call koreaCoachrun.bat
+call malaysiaCoachrun.bat
+call saudiarabiaCoachrun.bat
+call singaporeCoachrun.bat
+call taiwanCoachrun.bat
+call ukCoachrun.bat
