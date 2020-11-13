@@ -1,0 +1,1 @@
+﻿Rename-Item -Path ".\report.html" -NewName "report $(get-date -uformat %d%m%Y%H%M%S).html"

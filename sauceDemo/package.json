@@ -1,0 +1,17 @@
+{
+  "name": "sauceDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test-headless": "testcafe 'chrome:headless','firefox:headless' tests/*",
+    "test": "testcafe chrome,firefox,'chrome:headless','firefox:headless' tests/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
