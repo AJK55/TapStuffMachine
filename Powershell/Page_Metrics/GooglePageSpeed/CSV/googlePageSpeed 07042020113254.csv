@@ -1,0 +1,4 @@
+"test_url","pagespeed_url","FIRST_CONTENTFUL_PAINT_MS.category_Score","FIRST_INPUT_DELAY_MS.category_Score","loadingExperience.overall_category","originLoadingExperience.overall_category","analysisUTCTimestamp"
+"https://www.stuartweitzman.com/home/","https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://www.stuartweitzman.com/home/"," AVERAGE"," AVERAGE","AVERAGE","AVERAGE","4/7/2020 11:33:08 AM"
+"https://www.coach.com/","https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://www.coach.com/"," AVERAGE"," AVERAGE","AVERAGE","AVERAGE","4/7/2020 11:33:19 AM"
+"https://www.katespade.com/","https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://www.katespade.com/"," AVERAGE"," AVERAGE","AVERAGE","AVERAGE","4/7/2020 11:34:05 AM"

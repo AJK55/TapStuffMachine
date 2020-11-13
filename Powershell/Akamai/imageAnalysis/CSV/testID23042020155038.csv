@@ -1,0 +1,6 @@
+"url","testid","status","percentage"
+"https://images.coach.com/is/image/Coach/2214_eau_a45?fmt=jpg&wid=680&hei=885&bgc=f0f0f0&fit=vfit&qlt=75"," https://webspeedtest-api.cloudinary.com/test/200423_6V_6b377d420a6935de0a74f546ade5cffa","success","53"
+""," https://webspeedtest-api.cloudinary.com/test/200423_N9_272a061e83516402ccca71c51eeea376","error"," "
+""," https://webspeedtest-api.cloudinary.com/test/200423_KS_0a206cc28a164c50d25715124e3e31bc","error"," "
+"https://images.coach.com/is/image/Coach/1072_v5chk_a0?fmt=jpg&wid=680&hei=885&bgc=f0f0f0&fit=vfit&qlt=75"," https://webspeedtest-api.cloudinary.com/test/200423_68_e961974078589c55283f86fdf59c794f","success","53"
+""," https://webspeedtest-api.cloudinary.com/test/200423_WA_65044cb9a36033dd2427365c8c27aec2","success"," "
